@@ -35,9 +35,7 @@
 }
 
 .every__cource-bigImg {
-  /* width: 540px; */
-  /* width: 100%; */
-  height: 370px;
+  height: 350px;
   background-size: cover;
 }
 
@@ -63,10 +61,10 @@
 
 .every__cource-desc {
   padding: 23px 30px 15px 23px;
-  background: #5B4784;
-box-shadow: 15px 15px 100px rgba(0, 0, 0, 0.3);
-border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+  background: #5b4784;
+  box-shadow: 15px 15px 100px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .every__cource-header {
@@ -91,7 +89,6 @@ border-bottom-left-radius: 50px;
   height: 30px;
   cursor: pointer;
 }
-
 
 .every__cource-name p {
   font-family: "Inter";
@@ -152,21 +149,20 @@ border-bottom-left-radius: 50px;
   overflow-y: scroll;
   max-height: 90vh;
 }
-.main__course-buy .Nav{
+.main__course-buy .Nav {
   height: 100%;
 }
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 1000px) {
   .every__cource-bigImg {
     height: 270px;
   }
 }
 
-@media only screen and (max-width:540px) {
+@media only screen and (max-width: 540px) {
   .every__course-buttons {
     margin-top: 78px;
-
   }
-  .main__course-buy .modalDarslar{
+  .main__course-buy .modalDarslar {
     height: 100%;
   }
   .every__cource-desc {
@@ -176,7 +172,6 @@ border-bottom-left-radius: 50px;
   }
 
   .every__course-buttons button {
-    
     border-radius: 20px;
 
     padding: 7px 23px;
@@ -186,7 +181,7 @@ border-bottom-left-radius: 50px;
 
   .main__course-buy {
     display: block;
-position: relative;
+    position: relative;
   }
 
   .every__cource-bigImg {
@@ -202,13 +197,13 @@ position: relative;
   }
 }
 
-@media only screen and (max-width:490px) {
+@media only screen and (max-width: 490px) {
   .every__cource-bigImg {
     height: 250px;
   }
 }
 
-@media only screen and (max-width:430px) {
+@media only screen and (max-width: 430px) {
   .every__cource-bigImg {
     height: 230px;
   }
@@ -220,18 +215,17 @@ position: relative;
   .every__cource-nav {
     gap: 12px;
   }
-  .every__cource-info{
+  .every__cource-info {
     width: 100%;
   }
 }
 
-@media only screen and (max-width:390px) {
+@media only screen and (max-width: 390px) {
   .every__cource-bigImg {
     height: 200px;
   }
-  
 }
-.free_mark{
+.free_mark {
   display: block;
   border: 1px solid #fff;
   border-radius: 10px;

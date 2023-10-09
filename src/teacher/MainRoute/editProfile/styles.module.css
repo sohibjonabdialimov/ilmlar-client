@@ -94,5 +94,10 @@
   gap: 41px;
 }
 .input_wrap input {
-  width: 50%;
+  width: 100%;
 }
+/* @media only screen and (max-width: 1100px) {
+  .input_wrap {
+    flex-direction: column;
+  }
+} */
