@@ -76,7 +76,7 @@ function Baykurs() {
         
         <div className="videos_navbar">
           <ul>
-            {courseData.map((course, index) => (
+            {courseData?.map((course, index) => (
               <li
                 key={index}
                 onClick={() => {

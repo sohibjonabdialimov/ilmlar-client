@@ -85,7 +85,13 @@ function NotBoughtCourse() {
       )
       .then((response) => {
         console.log(response.data);
-        navigate("/student/kurs/olinganlar/" + kursId)
+        if (response.data !== "hisobingizni toldiring") {
+
+          navigate("/student/kurs/olinganlar/" + kursId)
+        }
+        else{
+          alert("hisongizni toldring")
+        }
       })
       .catch((error) => {
         console.error(error);
@@ -114,9 +120,8 @@ function NotBoughtCourse() {
           <div
             className="every__cource-bigImg"
             style={{
-              backgroundImage: `url(${
-                "https://api.ilmlar.com" + deleteplatforma(kurs?.obloshka)
-              })`,
+              backgroundImage: `url(${"https://api.ilmlar.com" + deleteplatforma(kurs?.obloshka)
+                })`,
             }}
           ></div>
 
