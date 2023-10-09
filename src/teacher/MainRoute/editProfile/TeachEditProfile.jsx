@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import camera from "../../../imgs/camera.png";
 
 function deleteplatforma(url) {
   try {
@@ -49,7 +50,7 @@ const TeachEditProfile = () => {
     formData.append("boglashlink", boglashlinkRef.current.value);
     formData.append("username", usernameRef.current.value);
     formData.append("file", userimgRef.current.files[0]);
-    
+
     axios
       .put("https://api.ilmlar.com/teacher/", formData, {
         headers: {
@@ -89,10 +90,21 @@ const TeachEditProfile = () => {
         </button>
         <div className={styles.imgs_div}>
           <img
-            src={image || "https://api.ilmlar.com" + deleteplatforma(profile.path)}
+            src={
+              image || "https://api.ilmlar.com" + deleteplatforma(profile.path)
+            }
+            className={styles.imgs_div_img}
             alt=""
           />
-          <input type="file" ref={userimgRef} onChange={handleImageChange} />
+          <div className={styles.select_camera_wrap}>
+            <img src={camera} alt="camera img" />
+            <input
+              type="file"
+              className={styles.img_file_input}
+              ref={userimgRef}
+              onChange={handleImageChange}
+            />
+          </div>
         </div>
         <form onSubmit={(e) => onHandleSubmit(e)} className={styles.form}>
           <div className={styles.input_wrap}>
@@ -100,21 +112,26 @@ const TeachEditProfile = () => {
               ref={fullnameRef}
               defaultValue={profile.fullname}
               type="text"
-              placeholder="ism"
+              placeholder="ism-familiya "
             />
           </div>
-          <input
-            ref={mutahasislikRef}
-            type="text"
-            defaultValue={profile.mutahasislik}
-            placeholder="mutaxassislik"
-          />
-          <input
-            ref={bioRef}
-            type="text"
-            defaultValue={profile.bio}
-            placeholder="bio"
-          />
+          <div className={styles.input_wrap}>
+            <input
+              ref={mutahasislikRef}
+              type="text"
+              defaultValue={profile.mutahasislik}
+              placeholder="mutaxassislik"
+            />
+          </div>
+          <div className={styles.input_wrap}>
+            <input
+              ref={bioRef}
+              type="text"
+              defaultValue={profile.bio}
+              placeholder="bio"
+            />
+          </div>
+
           <div className={styles.input_wrap}>
             <input
               ref={joylashuvRef}
@@ -122,6 +139,8 @@ const TeachEditProfile = () => {
               defaultValue={profile.joylashuv}
               placeholder="joylashuv"
             />
+          </div>
+          <div className={styles.input_wrap}>
             <input
               ref={boglashlinkRef}
               type="text"

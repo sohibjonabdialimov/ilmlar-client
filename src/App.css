@@ -85,7 +85,7 @@
 
 .ionex_hero {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   gap: 100px;
   padding: 97px 24px 35px 123px;
 }
@@ -296,7 +296,7 @@
   }
 
   .ionex_hero {
-    padding-left: 60px;
+    padding-left: 0px;
     padding-right: 0;
     gap: 50px;
   }

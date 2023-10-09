@@ -7,6 +7,9 @@
   border-radius: 50px;
   position: relative;
 }
+.edit_student_profile .form{
+  width: 50%;
+}
 .imgs_div {
   padding-top: 50px;
   width: 501px;
@@ -17,16 +20,25 @@
   gap: 13px;
   padding-bottom: 22px;
 }
-.imgs_div img:first-child {
+.imgs_div_img {
   border-radius: 50%;
-  width: 205px;
-  height: 205px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
 }
-.imgs_div img:last-child {
+.select_camera_wrap{
+  position: relative;
+}
+.select_camera_wrap img {
   width: 71px;
   height: 71px;
   object-fit: cover;
+  position: absolute;
+}
+.select_camera_wrap input{
+  opacity: 0;
+  width: 71px;
+  height: 71px;
 }
 .back {
   position: absolute;
@@ -72,7 +84,16 @@
 .edit_student_profile input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-.edit_student_profile input {
+
+
+.input_wrap {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  width: 100%;
+}
+.input_wrap input {
+  width: 100%;
   color: #fff;
   background-color: #5b4784;
   border: none;
@@ -85,19 +106,42 @@
   line-height: 24px;
   padding-bottom: 8px;
   display: block;
-  width: 100%;
   margin-bottom: 20px;
 }
-.input_wrap {
-  display: flex;
-  align-items: center;
-  gap: 41px;
+.img_file_input{
+  width: 50%;
 }
-.input_wrap input {
-  width: 100%;
-}
-/* @media only screen and (max-width: 1100px) {
-  .input_wrap {
-    flex-direction: column;
+@media only screen and (max-width: 1100px) {
+  .edit_student_profile {
+    width: 90%;
   }
-} */
+  .edit_student_profile .form{
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .imgs_div {
+    width: 300px;
+  }
+  .edit_student_profile {
+    width: 100%;
+  }
+  .edit_student_profile .form{
+    width: 70%;
+  }
+  .imgs_div_img {
+    width: 100px;
+    height: 100px;
+  }
+  .select_camera_wrap img {
+    width: 50px;
+    height: 50px;
+  }
+  .select_camera_wrap input{
+    width: 50px;
+    height: 50px;
+  }
+  .imgs_div {
+    padding-bottom: 40px;
+  }
+}

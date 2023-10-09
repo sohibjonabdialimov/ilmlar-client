@@ -74,7 +74,7 @@ function AboutCourseInfo() {
         }
         return res;
       }
-      return "/" + url;
+      return "" + url;
     } catch (error) {
       console.log(error);
     }

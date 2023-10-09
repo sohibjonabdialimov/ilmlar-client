@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import logo from "./imgs/ionex.png";
+
 import carousel1 from "./imgs/carusel/1.jpg";
+import img_platforma from "./imgs/begin_platforma_img.png";
 import logoilm from "./imgs/logo.png";
 
 import carousel2 from "./imgs/carusel/2.jpg";
@@ -79,8 +80,7 @@ function Begin() {
 
       <div className="ionex_hero">
         <div className="hero_logo">
-          <img src={logoilm} className="ionex-btn" alt="" />
-          <p>Yangi avlod ta'lim platformasi</p>
+          <img src={img_platforma} className="ionex-btn" alt="" />
         </div>
         <div>
           <img className="hero_img mobile-noneb" src={hero_img} alt="ionex" />
