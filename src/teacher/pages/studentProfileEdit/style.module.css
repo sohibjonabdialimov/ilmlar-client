@@ -1,6 +1,6 @@
 .edit_profile {
   background-color: #5b4784;
-  width: 45%;
+  width: 60%;
   margin: 0 auto;
   height: 90vh;
   box-shadow: 15px 15px 100px rgba(0, 0, 0, 0.3);
@@ -18,15 +18,25 @@
   gap: 13px;
   padding-bottom: 22px;
 }
-.imgs_div img:first-child {
-  width: 205px;
-  height: 205px;
+.imgs_div_img {
+  width: 180px;
+  height: 180px;
   object-fit: cover;
+  border-radius: 50%;
 }
-.imgs_div img:last-child {
+.img_file_input {
   width: 71px;
   height: 71px;
+  opacity: 0;
+}
+
+.select_camera_wrap img {
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  cursor: pointer;
   object-fit: cover;
+  position: absolute;
 }
 .back {
   position: absolute;
@@ -48,7 +58,7 @@
   font-size: 27px;
 }
 .form {
-  width: 501px;
+  width: 50%;
   margin: 0 auto;
 }
 .form button {
@@ -58,25 +68,21 @@
   font-size: 32px;
   line-height: 39px;
   text-align: center;
-  background: linear-gradient(
-    180deg,
-    #3706f4 4.65%,
-    rgba(55, 6, 244, 0) 181.36%
-  );
+  background: linear-gradient(180deg, #3706f4 4.65%, rgba(55, 6, 244, 0) 181.36%);
   border-radius: 50px;
   color: #ffffff;
   outline: none;
   padding: 7px 42px;
   display: block;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 60px;
   border: none;
   cursor: pointer;
 }
 .edit_profile input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-.edit_profile input {
+.form input {
   color: #fff;
   background-color: #5b4784;
   border: none;
@@ -103,34 +109,44 @@
   width: 50%;
 }
 
-@media (max-width: 512px) {
+@media only screen and (max-width: 1100px) {
   .edit_profile {
     width: 90%;
-    height: auto;
-    padding: 20px;
   }
+  .edit_profile .form {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
   .imgs_div {
-    width: 100px;
-    gap: 5px;
+    width: 300px;
   }
-  .imgs_div img:first-child {
-    width: 100px;
-    height: 100px;
-  }
-  .imgs_div img:last-child {
-    width: 40px;
-    height: 40px;
-  }
-  .form {
+  .edit_profile {
     width: 100%;
   }
-  .form button {
-    font-size: 24px;
-    padding: 5px 20px;
-    margin-top: 30px;
+  .edit_profile .form {
+    width: 80%;
   }
-  .edit_profile input {
-    font-size: 16px;
-    margin-bottom: 20px;
+  .imgs_div_img {
+    width: 140px;
+    height: 140px;
+  }
+  .select_camera_wrap img {
+    width: 70px;
+    height: 70px;
+  }
+  .select_camera_wrap input {
+    width: 50px;
+    height: 50px;
+  }
+  .imgs_div {
+    padding-bottom: 40px;
+  }
+  .form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .imgs_div {
+    padding-top: 70px;
   }
 }

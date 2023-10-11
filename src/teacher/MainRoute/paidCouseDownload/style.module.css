@@ -62,6 +62,7 @@
   border: 1.5px solid #ffffff;
   border-radius: 20px;
   background-color: #40325d;
+  cursor: pointer;
 }
 .input_file p {
   font-family: "Inter";
@@ -80,6 +81,7 @@
   right: 0;
   height: 100%;
   opacity: 0;
+  cursor: pointer;
 }
 
 .video_download_input_desc{

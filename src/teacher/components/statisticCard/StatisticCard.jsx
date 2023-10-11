@@ -32,6 +32,7 @@ const StatisticCard = (props) => {
   let kursId = props.cart._id;
   return (
     <div
+    style={{cursor: "pointer"}}
       onClick={() => {
         navigate("/teacher/statistic/" + kursId);
       }}

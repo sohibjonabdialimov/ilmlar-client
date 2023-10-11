@@ -43,10 +43,10 @@
 }
 .input_file {
   position: relative;
-  
+  cursor: pointer;
   color: #fff;
   width: 140px;
-  height: 140px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,6 +72,7 @@
   right: 0;
   height: 100%;
   opacity: 0;
+  cursor: pointer;
 }
 
 .video_download_input_desc{
