@@ -1,0 +1,94 @@
+.landing_teacher {
+  margin-bottom: 50px;
+}
+.landing_teacher_content {
+  padding-top: 120px;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-areas: "wrap1 wrap2";
+  align-items: center;
+  gap: 100px;
+}
+.landing_teacher_desc {
+  width: 600px;
+  grid-area: wrap1;
+  position: relative;
+}
+.landing_teacher_imgs {
+  grid-area: wrap2;
+  display: grid;
+  grid-template-areas:
+    "one two two"
+    "three two two"
+    "three four five";
+  gap: 12px;
+}
+.landing_teacher_imgs img {
+  width: 100%;
+  height: 100%;
+}
+.landing_teacher_imgs img:nth-child(1) {
+  grid-area: one;
+}
+.landing_teacher_imgs img:nth-child(2) {
+  grid-area: two;
+}
+.landing_teacher_imgs img:nth-child(3) {
+  grid-area: three;
+}
+.landing_teacher_imgs img:nth-child(4) {
+  grid-area: four;
+}
+.landing_teacher_imgs img:nth-child(5) {
+  grid-area: five;
+}
+.landing_teacher_desc p {
+  margin-bottom: 50px;
+}
+.teacher_extra_logo {
+  position: absolute;
+  bottom: -150px;
+  right: 50px;
+}
+@media (max-width: 1000px) {
+  .landing_teacher_content {
+    padding-top: 130px;
+    padding-bottom: 0px;
+    display: grid;
+    grid-template-areas: "wrap1" "wrap2";
+    align-items: center;
+    gap: 90px;
+  }
+  .teacher_extra_logo {
+    position: absolute;
+    bottom: -120px;
+    right: 0px;
+  }
+  .landing_teacher_desc {
+    width: 100%;
+    grid-area: wrap1;
+    position: relative;
+  }
+  .landing_teacher_imgs {
+    width: 100%;
+  }
+  .landing_teacher {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .landing_teacher_content {
+    padding-top: 30px;
+    padding-bottom: 0px;
+    gap: 50px;
+  }
+  .landing_teacher {
+    margin-bottom: 40px;
+  }
+  .teacher_extra_logo {
+    position: absolute;
+    bottom: -60px;
+    right: -10px;
+    width: 200px;
+  }
+}

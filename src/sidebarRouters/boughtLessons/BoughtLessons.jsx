@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import homeSidebar1 from "../../imgs/sidebar1.png";
-import homeSidebar2 from "../../imgs/sidebar2.png";
 import prev from "../../imgs/prev.svg";
 
-import SidebarCart from "../../components/SidebarCart/SidebarCart";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 function deleteplatforma(url) {
   try {
     if (url.includes("platforma")) {
@@ -23,8 +19,6 @@ function deleteplatforma(url) {
   }
 }
 function Baystudy({ modalDarslar, changeModalDars, topic }) {
-  const navigate = useNavigate();
-
   const handleClick = () => {
     changeModalDars(false);
   };
@@ -78,20 +72,21 @@ function Baystudy({ modalDarslar, changeModalDars, topic }) {
         <h2>Sotib olingan darslar - {teacherData?.length} ta</h2>
         <div className="sidebar-line"></div>
         <div className="sidebar-bought-course">
-          {teacherData && teacherData.map((item, index) => (
-            <div className="darslar-cart cursor_bought_class">
-              <img
-                src={
-                  "https://api.ilmlar.com" + deleteplatforma(item.obloshka)
-                }
-                alt=""
-              />
-              <div>
-                <p>{item?.Kursname}</p>
-                <strong>{item?.price}</strong>
+          {teacherData &&
+            teacherData.map((item, index) => (
+              <div className="darslar-cart cursor_bought_class">
+                <img
+                  src={
+                    "https://api.ilmlar.com" + deleteplatforma(item.obloshka)
+                  }
+                  alt=""
+                />
+                <div>
+                  <p>{item?.Kursname}</p>
+                  <strong>{item?.price}</strong>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </div>

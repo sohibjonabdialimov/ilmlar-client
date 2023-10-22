@@ -14,7 +14,7 @@ const TeacherRegistration = () => {
   const navigate = useNavigate();
 
   const onBack = () => {
-    navigate("/select");
+    navigate(-1);
   };
 
   const onHandler = (e) => {

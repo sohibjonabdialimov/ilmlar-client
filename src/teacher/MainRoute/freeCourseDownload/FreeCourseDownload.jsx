@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import "./style.css";
 
 function FreeCourseDownload() {
   const modalRef = useRef();
@@ -52,7 +53,6 @@ function FreeCourseDownload() {
       const newVideoLesson = { id: newId };
       setVideoLessons([...videoLessons, newVideoLesson]);
     }
-    
   };
   const handleRemoveVideoLesson = (id) => {
     const updatedVideoLessons = videoLessons.filter(
@@ -100,7 +100,7 @@ function FreeCourseDownload() {
         },
       })
       .then((res) => {
-        if(res.status === 200){
+        if (res.status === 200) {
           navigate("/free/success");
         }
         console.log(res);
@@ -125,7 +125,7 @@ function FreeCourseDownload() {
     <>
       <ToastContainer autoClose={2000} />
       <div className="app-content">
-        <div className="global_wrap">
+        <div className={styles.free_global_wrap}>
           <div className={styles.kurs_yuklash}>
             <button onClick={onBack} className={styles.back}>
               <ion-icon name="chevron-back-outline"></ion-icon>
@@ -144,90 +144,99 @@ function FreeCourseDownload() {
                 <textarea ref={courseDescRef}></textarea>
               </div>
               <div className={styles.upload_div}>
-                <div className={styles.input_file}>
-                  {!image && <p>Muqova uchun rasm</p>}
-                  <input
-                    onChange={handleInputChange}
-                    ref={courseImgRef}
-                    type="file"
-                    placeholder="Muqova uchun rasm"
-                    accept="image/*"
-                  />
-                  {image && (
-                    <div style={{ height: "100%" }}>
-                      <img
-                        src={image}
-                        alt="selected"
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
+                <div className={styles.muqova_wrapper}>
+                  <div className={styles.input_file}>
+                    {!image && <p>Muqova uchun rasm</p>}
+                    <input
+                      onChange={handleInputChange}
+                      ref={courseImgRef}
+                      type="file"
+                      placeholder="Muqova uchun rasm"
+                      accept="image/*"
+                    />
+                    {image && (
+                      <div style={{ height: "100%" }}>
+                        <img
+                          src={image}
+                          alt="selected"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                    )}
+                  </div>
+                  <div className={styles.extra_div}>
+                    <div className={styles.input_wrap}>
+                      <p htmlFor="amount" className={styles.amount}>
+                        Davomiylik
+                      </p>
+                      <select
+                        ref={courseMuddatiRef}
+                        className={styles.second}
+                        name=""
+                        id=""
+                      >
+                        <option value="1">1 oy</option>
+                        <option value="3">3 oy</option>
+                        <option value="6">6 oy</option>
+                        <option value="9">9 oy</option>
+                        <option value="12">12 oy</option>
+                        <option value="forewer">for ever</option>
+                      </select>
                     </div>
-                  )}
+                  </div>
                 </div>
                 <div className={styles.videos}>
                   {videoLessons.map((lesson, index) => (
                     <div className={styles.video_download} key={lesson.id}>
                       <p key={index}>{index + 1}-dars</p>
-                      <input
-                        type="text"
-                        placeholder="Enter video title"
-                        ref={titleInputRef}
-                        className={styles.video_download_input_title}
-                      />
-                      <input
-                        type="text"
-                        placeholder="Enter video description"
-                        ref={descriptionInputRef}
-                        className={styles.video_download_input_desc}
-                      />
-                      <input
-                        type="file"
-                        placeholder="Muqova uchun video"
-                        accept="video/*"
-                        ref={fileInputRef}
-                      />
-                      <div className={styles.plus_minus}>
-                        <button
-                          type="button"
-                          onClick={() => handleRemoveVideoLesson(lesson.id)}
-                          className={`${styles.plus_btn} ${styles.minus_btn}`}
-                        >
-                          <ion-icon name="remove-outline"></ion-icon>
-                        </button>
-                        <button
-                          type="submit"
-                          onClick={addVideoLesson}
-                          className={styles.plus_btn}
-                        >
-                          <ion-icon name="add-outline"></ion-icon>
-                        </button>
+                      <div className={styles.free_video_input_wrapper}>
+                        <input
+                          type="text"
+                          placeholder="Enter video title"
+                          ref={titleInputRef}
+                          className={styles.video_download_input_title}
+                        />
+                        <input
+                          type="text"
+                          placeholder="Enter video description"
+                          ref={descriptionInputRef}
+                          className={styles.video_download_input_desc}
+                        />
+                      </div>
+                      <div className={styles.free_video_button_wrapper}>
+                        <input
+                          type="file"
+                          placeholder="Muqova uchun video"
+                          accept="video/*"
+                          className={styles.video_download_input_file}
+                          ref={fileInputRef}
+                        />
+                        <div className={styles.plus_minus}>
+                          <button
+                            type="button"
+                            onClick={() => handleRemoveVideoLesson(lesson.id)}
+                            className={`${styles.plus_btn} ${styles.minus_btn}`}
+                          >
+                            <ion-icon name="remove-outline"></ion-icon>
+                          </button>
+                          <button
+                            type="submit"
+                            onClick={addVideoLesson}
+                            className={styles.plus_btn}
+                          >
+                            <ion-icon name="add-outline"></ion-icon>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className={styles.extra_div}>
-                <div className={styles.input_wrap}>
-                  <p htmlFor="amount" className={styles.amount}>
-                    Davomiylik
-                  </p>
-                  {/* <input
-                    ref={courseMuddatiRef}
-                    className={styles.second}
-                    type="text"
-                  /> */}
-                  <select ref={courseMuddatiRef} className={styles.second} name="" id="">
-                    <option value="1">1 oy</option>
-                    <option value="3">3 oy</option>
-                    <option value="6">6 oy</option>
-                    <option value="9">9 oy</option>
-                    <option value="12">12 oy</option>
-                  </select>
-                </div>
-              </div>
+
               <button className={styles.btn} type="submit">
                 KURSNI YUKLASH
               </button>
@@ -252,4 +261,3 @@ function FreeCourseDownload() {
 }
 
 export default FreeCourseDownload;
-

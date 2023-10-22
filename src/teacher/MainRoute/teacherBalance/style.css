@@ -35,10 +35,12 @@
   display: block;
   position: absolute;
   bottom: 46px;
-  left: 46%;
+  left: 50%;
   transform: translateX(-50%);
 }
-/* .balance{
-  height: 90vh;
-  overflow-y:scroll ;
-} */
+@media only screen and (max-width: 500px){
+  .price_btn {
+    font-size: 18px;
+    padding: 4px 30px;
+  }
+}

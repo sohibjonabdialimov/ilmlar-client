@@ -5,7 +5,6 @@ import Baykurs from "./kurslar/Baykurs";
 import Subs from "./sidebarRouters/Subs";
 import Darslar from "./sidebarRouters/Darslar";
 import TeacherInfo from "./mainRouters/TeacherInfo";
-import TeachSeekurs from "./teacher/MainRoute/Seekurs";
 import TeachPulyichishok from "./teacher/MainRoute/moneyProcess/Pulyichishok";
 import TeachEditProfile from "./teacher/MainRoute/editProfile/TeachEditProfile";
 import StudentLayout from "./layout/student/StudentLayout";
@@ -68,7 +67,6 @@ function App() {
         <Route path="/teacher" element={<TeacherLayout />}>
           <Route index element={<LessonsTeacher />} />
           <Route path="darslar" element={<LessonsTeacher />} />
-          <Route path="seekurs:kursId" element={<TeachSeekurs />} />
           <Route path="hisoblar" element={<TeacherBalance />} />
           <Route path="Kurs/:id" element={<AboutCourseInfo />} />
           <Route path="kurs/" element={<SelectDownloadCourse />} />

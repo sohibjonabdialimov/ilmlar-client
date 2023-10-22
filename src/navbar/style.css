@@ -84,7 +84,8 @@
     position: relative;
     padding: 8px 12px;
 }
-.teacher_nav_main li.active, .student_nav_main li.active{
+.teacher_nav_main li.active,
+.student_nav_main li.active {
     border-radius: 25px;
 }
 

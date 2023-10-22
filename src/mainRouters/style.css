@@ -21,7 +21,6 @@
 @media only screen and (max-width: 540px) {
   .main-page {
     display: block;
-    /* height: 100%; */
   }
   .courses_list {
     width: 100%;

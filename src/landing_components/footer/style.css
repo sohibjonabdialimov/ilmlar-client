@@ -1,0 +1,103 @@
+.landing_footer {
+  padding: 80px 40px 30px 40px;
+  font-weight: 600;
+  color: rgba(0, 34, 255, 1);
+}
+.landing_footer_content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 25px;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+.landing_footer_content a {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 20px;
+  color: rgba(0, 34, 255, 1);
+}
+.landing_footer_middle {
+  display: flex;
+  gap: 80px;
+}
+.landing_footer_middle_first {
+  display: flex;
+  flex-direction: column;
+}
+.landing_footer_number p {
+  margin-bottom: 10px;
+}
+.landing_footer_bottom {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  color: rgba(0, 34, 255, 1);
+}
+.landing_footer_bottom span {
+  font-weight: 800;
+}
+@media (max-width: 1120px) {
+  .landing_footer_content {
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .landing_footer {
+    padding: 80px 25px;
+  }
+}
+@media (max-width: 985px) {
+  .landing_footer_content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .landing_footer_number {
+    justify-self: center;
+  }
+  .landing_footer_logo {
+    justify-self: center;
+  }
+}
+@media (max-width: 550px) {
+  .landing_footer_content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .landing_footer_number {
+    justify-self: center;
+  }
+  .landing_footer_logo {
+    justify-self: center;
+  }
+  .landing_footer_logo img {
+    width: 240px;
+  }
+  .landing_footer_content a,
+  .landing_footer_number p,
+  .landing_footer_bottom {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .landing_footer {
+    padding: 15px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+  }
+  .landing_footer_middle {
+    gap: 15px;
+  }
+  .landing_footer_bottom {
+    margin-top: 20px;
+  }
+}

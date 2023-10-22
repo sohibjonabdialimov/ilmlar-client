@@ -334,6 +334,7 @@ function PaidCourseDownload() {
                     <option value="6">6 oy</option>
                     <option value="9">9 oy</option>
                     <option value="12">12 oy</option>
+                    <option value="forever">for ever</option>
                   </select>
                 </div>
               </div>

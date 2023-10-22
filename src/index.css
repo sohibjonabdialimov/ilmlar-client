@@ -12,7 +12,6 @@ body {
   background: linear-gradient(#8d6cd7, #d2aae8);
   color: #fff;
   font-family: "Inter", sans-serif;
-  
 }
 #root {
   height: 100%;
@@ -29,11 +28,16 @@ a {
   list-style: none;
   text-decoration: none;
 }
-button{
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+button {
   outline: none;
   cursor: pointer;
 }
-img{
+img {
   object-fit: cover;
 }
 ::-webkit-scrollbar {
@@ -52,18 +56,11 @@ img{
   height: 90vh;
 }
 
-/* .profile_student_height {
-  height: calc(100vh - 39px);
-}
-.balance_student_height {
-  height: 90vh;
-} */
-
 .teacherHomePage {
   width: 70vw;
   position: relative;
 }
-button{
+button {
   cursor: pointer;
 }
 
@@ -112,9 +109,9 @@ button{
   text-align: center;
   color: #ffffff;
 }
-.app-content{
-  padding: 37px 39px;
-  height: 100vh;
+.app-content {
+  padding: 34px 39px;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -138,11 +135,8 @@ button{
     display: block;
     width: 100%;
   }
-  /* body {
-  } */
-  .app-content{
-    padding: 54px 10px;
-
+  .app-content {
+    padding: 20px 10px;
     background-color: transparent;
   }
 }
@@ -152,10 +146,9 @@ button{
     display: flex;
   }
   .app-content {
-    padding: 30px 10px;
+    padding: 10px 10px;
   }
   .teacherHomePage {
     width: 100%;
   }
-  
 }

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+.common_title {
+  color: rgba(20, 0, 255, 1);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 47px;
+  margin-bottom: 18px;
+}
+.common_text {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  position: relative;
+  padding-left: 20px;
+}
+.common_text span {
+  font-weight: 800;
+  color: rgba(20, 0, 255, 1);
+  font-size: 26px;
+}
+.common_text::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: rgba(230, 1, 234, 1);
+  border-radius: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.landing_page {
+  font-family: "Open Sans", sans-serif;
+  padding: 30px 25px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.landing_card {
+  background-color: rgba(220, 224, 255, 1);
+  border-radius: 20px;
+  padding: 30px 25px 100px 80px;
+  box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.common_btn_wrap {
+  background-color: rgba(20, 0, 255, 1);
+  box-shadow: 5px 5px 5px rgba(3, 116, 76, 0.25);
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 54px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.common_btn_wrap img{
+  width: 10px;
+}
+.common_btn {
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+}
+@media (max-width: 600px) {
+  .landing_page {
+    padding: 1px;
+  }
+  .landing_card {
+    padding: 30px 25px 50px 25px;
+  }
+  .common_btn {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .common_btn_wrap {
+    background-color: rgba(20, 0, 255, 1);
+    box-shadow: 5px 5px 5px rgba(3, 116, 76, 0.25);
+    display: flex;
+    align-items: center;
+    width: 106px;
+    height: 36px;
+    justify-content: center;
+    gap: 15px;
+  }
+  .common_btn {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .common_btn_wrap img{
+    width: 6px;
+  }
+  .common_title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  .common_text {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .common_text span {
+    font-weight: 800;
+    font-size: 15.5px;
+  }
+}

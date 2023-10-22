@@ -1,0 +1,99 @@
+.landing_student {
+  position: relative;
+}
+.landing_student_content {
+  padding-top: 120px;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-areas: "wrap2 wrap1";
+  align-items: center;
+  gap: 100px;
+}
+.landing_student_desc {
+  width: 600px;
+  grid-area: wrap1;
+  position: relative;
+}
+.big_square {
+  position: absolute;
+  bottom: -130px;
+  right: 0;
+}
+.extra_logo {
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+.landing_student_imgs {
+  grid-area: wrap2;
+  display: grid;
+  grid-template-areas:
+    "one two three"
+    "four four three"
+    "four four five";
+  gap: 12px;
+}
+.landing_student_imgs img {
+  width: 100%;
+  height: 100%;
+}
+.landing_student_imgs img:nth-child(1) {
+  grid-area: one;
+}
+.landing_student_imgs img:nth-child(2) {
+  grid-area: two;
+}
+.landing_student_imgs img:nth-child(3) {
+  grid-area: three;
+}
+.landing_student_imgs img:nth-child(4) {
+  grid-area: four;
+}
+.landing_student_imgs img:nth-child(5) {
+  grid-area: five;
+}
+.landing_student_desc p {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1000px) {
+  .landing_student_content {
+    padding-top: 130px;
+    padding-bottom: 0px;
+    display: grid;
+    grid-template-areas: "wrap1" "wrap2";
+    align-items: center;
+    gap: 90px;
+  }
+  .landing_student_desc {
+    width: 100%;
+    grid-area: wrap1;
+    position: relative;
+  }
+  .landing_student_imgs {
+    width: 100%;
+  }
+  .landing_student {
+    margin-bottom: 30px;
+  }
+  .extra_logo {
+    top: 0;
+    right: 20px;
+    width: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .landing_student_content {
+    gap: 50px;
+    padding-top: 35px;
+    padding-bottom: 0px;
+  }
+  .landing_student {
+    margin-bottom: 40px;
+  }
+  .extra_logo {
+    top: 0;
+    right: 20px;
+    width: 140px;
+  }
+}

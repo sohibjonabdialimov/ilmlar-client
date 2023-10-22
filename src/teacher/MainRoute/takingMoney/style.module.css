@@ -22,9 +22,10 @@
   font-size: 27px;
 }
 .hisob_form {
-  width: 450px;
+  width: 35%;
   margin: 0 auto;
   margin-top: 80px;
+  position: relative;
 }
 .hisob_form button {
   font-family: "Inter";
@@ -39,11 +40,12 @@
   border: none;
   display: block;
   margin: 0 auto;
+  margin-top: 100px;
   color: #ffffff;
   cursor: pointer;
 }
 .input_wrap {
-  width: 450px;
+  width: 100%;
   margin-bottom: 36px;
 }
 .input_wrap label,
@@ -64,7 +66,7 @@
 }
 .input_div {
   background-color: #48386a;
-  width: 450px;
+  width: 100%;
   border-radius: 20px;
   padding: 23px 25px 2px 25px;
 }
@@ -89,4 +91,52 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
+}
+@media only screen and (max-width: 1200px){
+  .hisob_form {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1000px){
+  .hisob_form {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 650px){
+  .hisob_form {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 450px){
+  .hisob_form {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 540px){
+  .hisob_form button {
+    margin-top: 150px;
+  }
+  .hisob_form {
+    margin-top: 80px;
+  }
+  .hisob_form button {
+    font-size: 20px;
+  }
+  .input_wrap {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+  .input_wrap label,
+  .label_wrap label {
+    font-size: 17px;
+  }
+  .input_div input {
+    font-size: 17px;
+  }
+  .input_div input::placeholder {
+    font-size: 17px;
+  }
+  .input_div {
+    padding: 10px 25px 2px 25px;
+  }
 }

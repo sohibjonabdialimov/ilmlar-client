@@ -106,17 +106,17 @@
 .modal-navbar .Nav,
 .defDars .Nav {
   animation-name: mobileBurger;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
-  transition: 2s;
+  transition: 1s;
 }
 
 .modal-navbar .qaytish,
 .yoq .qaytish {
   animation-name: mobileBurgerQaytish;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
-  transition: 2s;
+  transition: 1s;
 }
 
 .burger {
@@ -153,7 +153,7 @@
   }
 
   .blur {
-    filter: blur(4px);
+    filter: blur(1px);
   }
 
   .main-page {

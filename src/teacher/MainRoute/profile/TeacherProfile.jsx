@@ -54,7 +54,6 @@ function TeacherProfile() {
   return (
     <div className={styles.teacher_profil}>
       <div className={modal ? "def modal-navbar" : "def yoq"}>
-          {/* <StudentNavbar changeModal={changeModal} modal={modal} /> */}
           <TeacherNavbar changeModal={changeModal} modal={modal} />
         </div>
         <div

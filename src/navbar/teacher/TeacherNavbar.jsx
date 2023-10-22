@@ -11,6 +11,7 @@ import t6 from "../../imgs/t6.svg";
 import prev from "../../imgs/prev.svg";
 function TeacherNavbar({ changeModal, modal }) {
   const [modalClass, setModalClass] = useState("");
+  
   const lessonsRef = useRef();
   const balanceRef = useRef();
   const saveRef = useRef();
@@ -55,12 +56,12 @@ function TeacherNavbar({ changeModal, modal }) {
       updateRef?.current?.classList?.add("active");
       profileRef?.current?.classList?.remove("active");
     } else if (window.location.pathname === "/teacher/profile") {
+      profileRef?.current?.classList?.add("active");
       lessonsRef?.current?.classList?.remove("active");
       balanceRef?.current?.classList?.remove("active");
       saveRef?.current?.classList?.remove("active");
       statisticRef?.current?.classList?.remove("active");
       updateRef?.current?.classList?.remove("active");
-      profileRef?.current?.classList?.add("active");
     }
   }, [window.location.pathname]);
 
